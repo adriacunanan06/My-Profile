@@ -13,7 +13,6 @@
         html { scroll-padding-top: 100px; }
         body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
         
-        /* Executive Theme: Deep Navy & Trust Blue */
         .hero-bg { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
         
         .section-title {
@@ -47,18 +46,23 @@
 
         header nav a { color: #cbd5e1 !important; font-weight: 500; transition: color 0.2s; }
         header nav a:hover { color: #fff !important; }
+        
+        .ai-output-box { @apply w-full min-h-[100px] bg-slate-50 border border-slate-200 rounded p-3 text-slate-700 text-sm whitespace-pre-wrap mt-3; }
+        .ai-input { @apply w-full p-3 rounded border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm; }
+        .btn-ai { @apply w-full bg-slate-800 hover:bg-black text-white font-medium py-2 px-4 rounded flex items-center justify-center mt-3 text-sm transition-colors; }
+        .btn-ai .spinner { @apply w-4 h-4 mr-2 border-2 border-white border-t-transparent rounded-full animate-spin; }
     </style>
 </head>
 <body class="text-slate-700">
 
     <iframe name="hiddenConfirm" id="hiddenConfirm" style="display: none;"></iframe>
 
-    <!-- 1. RESULTS TICKER -->
+    <!-- Top Bar -->
     <div class="bg-blue-700 text-white text-xs md:text-sm py-2 text-center font-bold tracking-wide uppercase">
         🚀 Recent Wins: Reduced Team Response Time by 40% • Recovered Revenue via Dispute Defense • 100% SOP Compliance
     </div>
 
-    <!-- Header -->
+    <!-- Navigation -->
     <header class="bg-slate-900 sticky top-0 left-0 right-0 z-50 shadow-md">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#home" class="text-xl font-bold text-white tracking-tight">Adrian Cunanan</a>
@@ -71,7 +75,7 @@
             </div>
             <button id="mobile-menu-button" class="md:hidden text-white"><i data-feather="menu"></i></button>
         </nav>
-        <!-- Mobile Menu -->
+        
         <div id="mobile-menu" class="hidden md:hidden bg-slate-900 pb-4">
             <a href="#about" class="block py-3 px-6 text-white hover:bg-slate-800">About</a>
             <a href="#portfolio" class="block py-3 px-6 text-white hover:bg-slate-800">Proof of Work</a>
@@ -81,11 +85,10 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section id="home" class="hero-bg text-white pt-20 pb-24">
         <div class="container mx-auto px-6 text-center">
             
-            <!-- Availability Badge -->
             <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 text-xs font-bold tracking-wider text-green-300 uppercase bg-green-900/30 rounded-full border border-green-500/30">
                 <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
                 Available 7 Days Per Week
@@ -104,58 +107,61 @@
                 <a href="#portfolio" class="btn btn-secondary">See Work Samples</a>
             </div>
 
-            <!-- VIDEO PLACEHOLDER -->
+            <!-- Intro Video -->
             <div class="max-w-3xl mx-auto bg-slate-800 rounded-xl overflow-hidden shadow-2xl border border-slate-700">
-                <!-- IMPORTANT: Paste your Loom Embed code below this line -->
                 <div class="aspect-video w-full flex items-center justify-center bg-slate-900 text-slate-500">
+                    <!-- Replace this inner div with your iframe/embed code -->
                     <div class="text-center p-10">
                         <i data-feather="video" class="w-12 h-12 mx-auto mb-4 opacity-50"></i>
-                        <p class="font-bold">Video Introduction Placeholder</p>
-                        <p class="text-sm">Record a 60s Loom video and paste the embed code here.</p>
+                        <p class="font-bold">Video Introduction</p>
+                        <p class="text-sm">Watch my 60-second introduction & portfolio walkthrough.</p>
                     </div>
                 </div>
             </div>
             <p class="text-xs text-slate-400 mt-3">
                 <i data-feather="lock" class="inline w-3 h-3 mr-1"></i> 
-                Watch my 60-second introduction & portfolio walkthrough.
+                Confidential overview of my operational workflows.
             </p>
         </div>
     </section>
 
-    <!-- 2. PORTFOLIO / VISUAL PROOF -->
+    <!-- Work Samples -->
     <section id="portfolio" class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <h2 class="section-title">Visual Proof of Work</h2>
             <p class="text-center text-slate-500 mb-10 max-w-2xl mx-auto">
-                I believe in showing, not just telling. Here are redacted samples of my daily workflows.
+                I believe in showing, not just telling. Click any image below to view the redacted samples of my daily workflows.
             </p>
             
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Sample 1: Dispute Tracker -->
-                <div class="group cursor-pointer">
+                <div class="group cursor-pointer transform hover:scale-105 transition-transform duration-300" onclick="openModal('tracker.png', 'Chargeback Tracking Log')">
                     <div class="overflow-hidden rounded-lg shadow border border-slate-200 bg-slate-100 h-48 flex items-center justify-center relative">
-                        <!-- Filename: tracker.png -->
                         <img src="tracker.png" alt="Dispute Tracker" class="object-cover w-full h-full">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="text-white font-bold flex items-center"><i data-feather="zoom-in" class="mr-2"></i> View Full Size</span>
+                        </div>
                     </div>
                     <h3 class="font-bold text-slate-800 mt-4">Chargeback Tracking Log</h3>
                     <p class="text-sm text-slate-500">My system for tracking dispute evidence and win/loss ratios.</p>
                 </div>
 
-                <!-- Sample 2: SOP Doc -->
-                <div class="group cursor-pointer">
+                <div class="group cursor-pointer transform hover:scale-105 transition-transform duration-300" onclick="openModal('sop.jpg', 'Support Team SOPs')">
                     <div class="overflow-hidden rounded-lg shadow border border-slate-200 bg-slate-100 h-48 flex items-center justify-center relative">
-                        <!-- Filename: sop.jpg -->
                         <img src="sop.jpg" alt="SOP Doc" class="object-cover w-full h-full">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="text-white font-bold flex items-center"><i data-feather="zoom-in" class="mr-2"></i> View Full Size</span>
+                        </div>
                     </div>
                     <h3 class="font-bold text-slate-800 mt-4">Support Team SOPs</h3>
                     <p class="text-sm text-slate-500">Training manuals I write to standardize agent responses.</p>
                 </div>
 
-                <!-- Sample 3: Dispute Won -->
-                <div class="group cursor-pointer">
+                <div class="group cursor-pointer transform hover:scale-105 transition-transform duration-300" onclick="openModal('won.png', 'Evidence Success')">
                     <div class="overflow-hidden rounded-lg shadow border border-slate-200 bg-slate-100 h-48 flex items-center justify-center relative">
-                        <!-- Filename: won.png -->
                         <img src="won.png" alt="Dispute Won" class="object-cover w-full h-full">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="text-white font-bold flex items-center"><i data-feather="zoom-in" class="mr-2"></i> View Full Size</span>
+                        </div>
                     </div>
                     <h3 class="font-bold text-slate-800 mt-4">Evidence Success</h3>
                     <p class="text-sm text-slate-500">Successful reversal of high-value chargebacks.</p>
@@ -164,7 +170,7 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About -->
     <section id="about" class="py-20 bg-slate-50">
         <div class="container mx-auto px-6">
             <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-10 items-center">
@@ -200,24 +206,21 @@
         </div>
     </section>
 
-    <!-- Skills / Disputes Focus -->
+    <!-- Competencies -->
     <section id="skills" class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <h2 class="section-title">Core Competencies</h2>
             <div class="grid md:grid-cols-3 gap-6">
-                <!-- Skill 1 -->
                 <div class="card group">
                     <div class="mb-4 text-blue-600"><i data-feather="shield" class="w-10 h-10"></i></div>
                     <h3 class="text-lg font-bold mb-2">Dispute Management</h3>
                     <p class="text-sm text-slate-600">I use evidence-based templates to fight chargebacks. I track "at-risk" orders before they ship to prevent disputes before they happen.</p>
                 </div>
-                <!-- Skill 2 -->
                 <div class="card group">
                     <div class="mb-4 text-blue-600"><i data-feather="users" class="w-10 h-10"></i></div>
                     <h3 class="text-lg font-bold mb-2">Team Leadership</h3>
                     <p class="text-sm text-slate-600">Experienced in hiring, onboarding, and training support agents. I build the SOPs that keep the team efficient and consistent.</p>
                 </div>
-                <!-- Skill 3 -->
                 <div class="card group">
                     <div class="mb-4 text-blue-600"><i data-feather="shopping-bag" class="w-10 h-10"></i></div>
                     <h3 class="text-lg font-bold mb-2">Dropshipping Ops</h3>
@@ -232,7 +235,6 @@
         <div class="container mx-auto px-6">
             <h2 class="section-title">Experience</h2>
             <div class="max-w-3xl mx-auto space-y-8">
-                <!-- Role 1 -->
                 <div class="bg-white p-6 rounded-xl border border-slate-200">
                     <div class="flex justify-between items-start mb-2">
                         <h3 class="font-bold text-lg text-slate-800">Shopify Operations Director</h3>
@@ -245,7 +247,6 @@
                         <li><strong>Systems:</strong> Migrated team from Gmail to Freshdesk/RingCentral for better tracking.</li>
                     </ul>
                 </div>
-                <!-- Role 2 -->
                 <div class="bg-white p-6 rounded-xl border border-slate-200">
                     <div class="flex justify-between items-start mb-2">
                         <h3 class="font-bold text-lg text-slate-800">Technical Support Engineer</h3>
@@ -261,7 +262,7 @@
         </div>
     </section>
 
-    <!-- Contact -->
+    <!-- Contact Form -->
     <section id="contact" class="py-20 hero-bg text-white">
         <div class="container mx-auto px-6 max-w-2xl text-center">
             <h2 class="text-3xl font-bold mb-4">Let's Secure Your Operations</h2>
@@ -292,15 +293,26 @@
         &copy; 2026 Adrian Cunanan. All Rights Reserved.
     </footer>
 
+    <!-- Modal -->
+    <div id="imageModal" class="fixed inset-0 z-50 hidden bg-black/95 flex items-center justify-center p-4 backdrop-blur-sm transition-opacity duration-300 opacity-0" onclick="closeModal()">
+        <div class="relative max-w-7xl max-h-[95vh] w-full flex flex-col items-center">
+            <button class="absolute -top-12 right-0 text-white hover:text-gray-300 focus:outline-none p-2" onclick="closeModal()">
+                <i data-feather="x" class="w-8 h-8"></i>
+            </button>
+            <div class="w-full flex justify-center items-center overflow-auto max-h-[85vh]">
+                <img id="modalImage" src="" alt="Full View" class="max-w-full object-contain rounded-sm shadow-2xl border border-gray-800">
+            </div>
+            <p id="modalCaption" class="text-gray-300 mt-4 text-lg font-medium text-center"></p>
+        </div>
+    </div>
+
     <script>
         feather.replace();
         
-        // Mobile Menu
         const btn = document.getElementById('mobile-menu-button');
         const menu = document.getElementById('mobile-menu');
         btn.addEventListener('click', () => menu.classList.toggle('hidden'));
 
-        // Form Logic
         const form = document.getElementById('contact-form');
         const status = document.getElementById('form-status');
         const iframe = document.getElementById('hiddenConfirm');
@@ -311,6 +323,40 @@
                 status.innerText = "Message Sent! I'll reply shortly.";
                 form.reset();
                 setTimeout(() => status.innerText = "", 4000);
+            }
+        });
+
+        function openModal(imageSrc, caption) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const modalCap = document.getElementById('modalCaption');
+            
+            modalImg.src = imageSrc;
+            modalCap.innerText = caption;
+            
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+            }, 10);
+            
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.add('opacity-0');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.getElementById('modalImage').src = '';
+            }, 300);
+            
+            document.body.style.overflow = 'auto';
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeModal();
             }
         });
     </script>
