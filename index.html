@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adrian Cunanan | Shopify Operations Director</title>
+    <!-- Favicon -->
+    <link rel="icon" href="https://lh3.googleusercontent.com/d/1uRHX70RouSdWuU2Wxf-OayJTuw1mBI00">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,6 +49,11 @@
 
         header nav a { color: #cbd5e1 !important; font-weight: 500; transition: color 0.2s; }
         header nav a:hover { color: #fff !important; }
+        
+        .ai-output-box { @apply w-full min-h-[100px] bg-slate-50 border border-slate-200 rounded p-3 text-slate-700 text-sm whitespace-pre-wrap mt-3; }
+        .ai-input { @apply w-full p-3 rounded border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm; }
+        .btn-ai { @apply w-full bg-slate-800 hover:bg-black text-white font-medium py-2 px-4 rounded flex items-center justify-center mt-3 text-sm transition-colors; }
+        .btn-ai .spinner { @apply w-4 h-4 mr-2 border-2 border-white border-t-transparent rounded-full animate-spin; }
     </style>
 </head>
 <body class="text-slate-700">
