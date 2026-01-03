@@ -46,11 +46,6 @@
 
         header nav a { color: #cbd5e1 !important; font-weight: 500; transition: color 0.2s; }
         header nav a:hover { color: #fff !important; }
-        
-        .ai-output-box { @apply w-full min-h-[100px] bg-slate-50 border border-slate-200 rounded p-3 text-slate-700 text-sm whitespace-pre-wrap mt-3; }
-        .ai-input { @apply w-full p-3 rounded border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm; }
-        .btn-ai { @apply w-full bg-slate-800 hover:bg-black text-white font-medium py-2 px-4 rounded flex items-center justify-center mt-3 text-sm transition-colors; }
-        .btn-ai .spinner { @apply w-4 h-4 mr-2 border-2 border-white border-t-transparent rounded-full animate-spin; }
     </style>
 </head>
 <body class="text-slate-700">
@@ -106,22 +101,6 @@
                 <a href="#contact" class="btn btn-primary">Interview Me</a>
                 <a href="#portfolio" class="btn btn-secondary">See Work Samples</a>
             </div>
-
-            <!-- Intro Video -->
-            <div class="max-w-3xl mx-auto bg-slate-800 rounded-xl overflow-hidden shadow-2xl border border-slate-700">
-                <div class="aspect-video w-full flex items-center justify-center bg-slate-900 text-slate-500">
-                    <!-- Replace this inner div with your iframe/embed code -->
-                    <div class="text-center p-10">
-                        <i data-feather="video" class="w-12 h-12 mx-auto mb-4 opacity-50"></i>
-                        <p class="font-bold">Video Introduction</p>
-                        <p class="text-sm">Watch my 60-second introduction & portfolio walkthrough.</p>
-                    </div>
-                </div>
-            </div>
-            <p class="text-xs text-slate-400 mt-3">
-                <i data-feather="lock" class="inline w-3 h-3 mr-1"></i> 
-                Confidential overview of my operational workflows.
-            </p>
         </div>
     </section>
 
@@ -293,7 +272,7 @@
         &copy; 2026 Adrian Cunanan. All Rights Reserved.
     </footer>
 
-    <!-- Modal -->
+    <!-- Full Screen Modal -->
     <div id="imageModal" class="fixed inset-0 z-50 hidden bg-black/95 flex items-center justify-center p-4 backdrop-blur-sm transition-opacity duration-300 opacity-0" onclick="closeModal()">
         <div class="relative max-w-7xl max-h-[95vh] w-full flex flex-col items-center">
             <button class="absolute -top-12 right-0 text-white hover:text-gray-300 focus:outline-none p-2" onclick="closeModal()">
