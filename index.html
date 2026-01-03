@@ -49,11 +49,6 @@
 
         header nav a { color: #cbd5e1 !important; font-weight: 500; transition: color 0.2s; }
         header nav a:hover { color: #fff !important; }
-        
-        .ai-output-box { @apply w-full min-h-[100px] bg-slate-50 border border-slate-200 rounded p-3 text-slate-700 text-sm whitespace-pre-wrap mt-3; }
-        .ai-input { @apply w-full p-3 rounded border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm; }
-        .btn-ai { @apply w-full bg-slate-800 hover:bg-black text-white font-medium py-2 px-4 rounded flex items-center justify-center mt-3 text-sm transition-colors; }
-        .btn-ai .spinner { @apply w-4 h-4 mr-2 border-2 border-white border-t-transparent rounded-full animate-spin; }
     </style>
 </head>
 <body class="text-slate-700">
@@ -89,25 +84,43 @@
     </header>
 
     <!-- Hero -->
-    <section id="home" class="hero-bg text-white pt-20 pb-24">
-        <div class="container mx-auto px-6 text-center">
-            
-            <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 text-xs font-bold tracking-wider text-green-300 uppercase bg-green-900/30 rounded-full border border-green-500/30">
-                <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                Available 7 Days Per Week
-            </div>
+    <section id="home" class="hero-bg text-white pt-24 pb-24">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                
+                <!-- Text Column -->
+                <div class="md:w-1/2 text-center md:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 text-xs font-bold tracking-wider text-green-300 uppercase bg-green-900/30 rounded-full border border-green-500/30">
+                        <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                        Available 7 Days Per Week
+                    </div>
 
-            <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-6">
-                Shopify Operations Director & <br> Dispute Defense Specialist
-            </h1>
-            
-            <p class="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
-                I help dropshipping brands scale by building <strong>high-performance support teams</strong>, managing <strong>daily logistics</strong>, and fighting <strong>chargebacks</strong> to protect your revenue.
-            </p>
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+                        Shopify Operations Director & <br> Dispute Defense Specialist
+                    </h1>
+                    
+                    <p class="text-lg text-slate-300 mb-8 max-w-lg mx-auto md:mx-0">
+                        I help dropshipping brands scale by building <strong>high-performance support teams</strong>, managing <strong>daily logistics</strong>, and fighting <strong>chargebacks</strong> to protect your revenue.
+                    </p>
 
-            <div class="flex justify-center gap-4 mb-12">
-                <a href="#contact" class="btn btn-primary">Interview Me</a>
-                <a href="#portfolio" class="btn btn-secondary">See Work Samples</a>
+                    <div class="flex justify-center md:justify-start gap-4">
+                        <a href="#contact" class="btn btn-primary">Interview Me</a>
+                        <a href="#portfolio" class="btn btn-secondary">See Work Samples</a>
+                    </div>
+                </div>
+
+                <!-- Image Column -->
+                <div class="md:w-1/2 flex justify-center relative">
+                    <!-- Decorative Circle behind image -->
+                    <div class="absolute inset-0 bg-blue-500/20 rounded-full blur-3xl transform scale-90"></div>
+                    
+                    <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-slate-700 shadow-2xl">
+                        <img src="https://lh3.googleusercontent.com/d/1uRHX70RouSdWuU2Wxf-OayJTuw1mBI00" 
+                             alt="Adrian Cunanan" 
+                             class="w-full h-full object-cover">
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -280,7 +293,7 @@
         &copy; 2026 Adrian Cunanan. All Rights Reserved.
     </footer>
 
-    <!-- Full Screen Modal -->
+    <!-- Modal -->
     <div id="imageModal" class="fixed inset-0 z-50 hidden bg-black/95 flex items-center justify-center p-4 backdrop-blur-sm transition-opacity duration-300 opacity-0" onclick="closeModal()">
         <div class="relative max-w-7xl max-h-[95vh] w-full flex flex-col items-center">
             <button class="absolute -top-12 right-0 text-white hover:text-gray-300 focus:outline-none p-2" onclick="closeModal()">
