@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adrian Cunanan | Shopify Operations Director</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        html { scroll-padding-top: 100px; }
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        
+        /* Executive Theme: Deep Navy & Trust Blue */
+        .hero-bg { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
+        
+        .section-title {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: #2563eb;
+            border-radius: 2px;
+        }
+
+        .card {
+            @apply bg-white rounded-xl shadow-sm p-6 border border-slate-200 hover:shadow-md hover:border-blue-500 transition-all duration-300;
+        }
+        
+        .btn { @apply px-6 py-3 rounded-lg font-semibold text-white transition-all duration-300; }
+        .btn-primary { @apply bg-blue-600 hover:bg-blue-700 shadow-lg hover:shadow-blue-500/30; }
+        .btn-secondary { @apply bg-slate-700 hover:bg-slate-800 border border-slate-600; }
+
+        header nav a { color: #cbd5e1 !important; font-weight: 500; transition: color 0.2s; }
+        header nav a:hover { color: #fff !important; }
+    </style>
+</head>
+<body class="text-slate-700">
+
+    <iframe name="hiddenConfirm" id="hiddenConfirm" style="display: none;"></iframe>
+
+    <!-- 1. RESULTS TICKER -->
+    <div class="bg-blue-700 text-white text-xs md:text-sm py-2 text-center font-bold tracking-wide uppercase">
+        🚀 Recent Wins: Reduced Team Response Time by 40% • Recovered Revenue via Dispute Defense • 100% SOP Compliance
+    </div>
+
+    <!-- Header -->
+    <header class="bg-slate-900 sticky top-0 left-0 right-0 z-50 shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-xl font-bold text-white tracking-tight">Adrian Cunanan</a>
+            <div class="hidden md:flex space-x-6 text-sm">
+                <a href="#about">About</a>
+                <a href="#portfolio">Proof of Work</a>
+                <a href="#skills">Competencies</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500 !text-white transition">Hire Me</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-white"><i data-feather="menu"></i></button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 pb-4">
+            <a href="#about" class="block py-3 px-6 text-white hover:bg-slate-800">About</a>
+            <a href="#portfolio" class="block py-3 px-6 text-white hover:bg-slate-800">Proof of Work</a>
+            <a href="#skills" class="block py-3 px-6 text-white hover:bg-slate-800">Skills</a>
+            <a href="#experience" class="block py-3 px-6 text-white hover:bg-slate-800">Experience</a>
+            <a href="#contact" class="block py-3 px-6 text-blue-400 font-bold">Hire Me</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg text-white pt-20 pb-24">
+        <div class="container mx-auto px-6 text-center">
+            
+            <!-- Availability Badge -->
+            <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 text-xs font-bold tracking-wider text-green-300 uppercase bg-green-900/30 rounded-full border border-green-500/30">
+                <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                Available 7 Days Per Week
+            </div>
+
+            <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-6">
+                Shopify Operations Director & <br> Dispute Defense Specialist
+            </h1>
+            
+            <p class="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
+                I help dropshipping brands scale by building <strong>high-performance support teams</strong>, managing <strong>daily logistics</strong>, and fighting <strong>chargebacks</strong> to protect your revenue.
+            </p>
+
+            <div class="flex justify-center gap-4 mb-12">
+                <a href="#contact" class="btn btn-primary">Interview Me</a>
+                <a href="#portfolio" class="btn btn-secondary">See Work Samples</a>
+            </div>
+
+            <!-- VIDEO PLACEHOLDER -->
+            <div class="max-w-3xl mx-auto bg-slate-800 rounded-xl overflow-hidden shadow-2xl border border-slate-700">
+                <!-- IMPORTANT: Paste your Loom Embed code below this line -->
+                <div class="aspect-video w-full flex items-center justify-center bg-slate-900 text-slate-500">
+                    <div class="text-center p-10">
+                        <i data-feather="video" class="w-12 h-12 mx-auto mb-4 opacity-50"></i>
+                        <p class="font-bold">Video Introduction Placeholder</p>
+                        <p class="text-sm">Record a 60s Loom video and paste the embed code here.</p>
+                    </div>
+                </div>
+            </div>
+            <p class="text-xs text-slate-400 mt-3">
+                <i data-feather="lock" class="inline w-3 h-3 mr-1"></i> 
+                Watch my 60-second introduction & portfolio walkthrough.
+            </p>
+        </div>
+    </section>
+
+    <!-- 2. PORTFOLIO / VISUAL PROOF -->
+    <section id="portfolio" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Visual Proof of Work</h2>
+            <p class="text-center text-slate-500 mb-10 max-w-2xl mx-auto">
+                I believe in showing, not just telling. Here are redacted samples of my daily workflows.
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Sample 1: Dispute Tracker -->
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-lg shadow border border-slate-200 bg-slate-100 h-48 flex items-center justify-center relative">
+                        <!-- Filename: tracker.png -->
+                        <img src="tracker.png" alt="Dispute Tracker" class="object-cover w-full h-full">
+                    </div>
+                    <h3 class="font-bold text-slate-800 mt-4">Chargeback Tracking Log</h3>
+                    <p class="text-sm text-slate-500">My system for tracking dispute evidence and win/loss ratios.</p>
+                </div>
+
+                <!-- Sample 2: SOP Doc -->
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-lg shadow border border-slate-200 bg-slate-100 h-48 flex items-center justify-center relative">
+                        <!-- Filename: sop.jpg -->
+                        <img src="sop.jpg" alt="SOP Doc" class="object-cover w-full h-full">
+                    </div>
+                    <h3 class="font-bold text-slate-800 mt-4">Support Team SOPs</h3>
+                    <p class="text-sm text-slate-500">Training manuals I write to standardize agent responses.</p>
+                </div>
+
+                <!-- Sample 3: Dispute Won -->
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-lg shadow border border-slate-200 bg-slate-100 h-48 flex items-center justify-center relative">
+                        <!-- Filename: won.png -->
+                        <img src="won.png" alt="Dispute Won" class="object-cover w-full h-full">
+                    </div>
+                    <h3 class="font-bold text-slate-800 mt-4">Evidence Success</h3>
+                    <p class="text-sm text-slate-500">Successful reversal of high-value chargebacks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-800 mb-4">I Don't Just Manage.<br>I Take Ownership.</h2>
+                    <p class="text-slate-600 mb-4">
+                        Most VAs wait for instructions. I audit the store, find the leaks (like high chargeback rates or slow response times), and fix them. 
+                    </p>
+                    <p class="text-slate-600 mb-6">
+                        From hiring and training your support team to managing the ugly side of dropshipping (returns & disputes), I handle the daily operations so you can focus on marketing.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-bold">Shopify Expert</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-bold">Freshdesk / Gorgias</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-bold">Stripe Disputes</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-bold">AI Automation</span>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200">
+                    <h3 class="font-bold text-slate-800 mb-4 flex items-center gap-2">
+                        <i data-feather="check-square" class="text-blue-600"></i>
+                        My Daily Execution Stack
+                    </h3>
+                    <ul class="space-y-3 text-sm text-slate-600">
+                        <li class="flex items-start gap-3"><i data-feather="check" class="w-4 h-4 text-green-500 mt-0.5"></i> <strong>Shopify:</strong> Order processing, edits, & refunds.</li>
+                        <li class="flex items-start gap-3"><i data-feather="check" class="w-4 h-4 text-green-500 mt-0.5"></i> <strong>Disputes:</strong> Evidence submission (Shopify Payments).</li>
+                        <li class="flex items-start gap-3"><i data-feather="check" class="w-4 h-4 text-green-500 mt-0.5"></i> <strong>Team Lead:</strong> QA audits & daily standups.</li>
+                        <li class="flex items-start gap-3"><i data-feather="check" class="w-4 h-4 text-green-500 mt-0.5"></i> <strong>AI Tools:</strong> Drafting SOPs & email templates.</li>
+                        <li class="flex items-start gap-3"><i data-feather="check" class="w-4 h-4 text-green-500 mt-0.5"></i> <strong>Schedule:</strong> Full 7-day coverage availability.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills / Disputes Focus -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Core Competencies</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Skill 1 -->
+                <div class="card group">
+                    <div class="mb-4 text-blue-600"><i data-feather="shield" class="w-10 h-10"></i></div>
+                    <h3 class="text-lg font-bold mb-2">Dispute Management</h3>
+                    <p class="text-sm text-slate-600">I use evidence-based templates to fight chargebacks. I track "at-risk" orders before they ship to prevent disputes before they happen.</p>
+                </div>
+                <!-- Skill 2 -->
+                <div class="card group">
+                    <div class="mb-4 text-blue-600"><i data-feather="users" class="w-10 h-10"></i></div>
+                    <h3 class="text-lg font-bold mb-2">Team Leadership</h3>
+                    <p class="text-sm text-slate-600">Experienced in hiring, onboarding, and training support agents. I build the SOPs that keep the team efficient and consistent.</p>
+                </div>
+                <!-- Skill 3 -->
+                <div class="card group">
+                    <div class="mb-4 text-blue-600"><i data-feather="shopping-bag" class="w-10 h-10"></i></div>
+                    <h3 class="text-lg font-bold mb-2">Dropshipping Ops</h3>
+                    <p class="text-sm text-slate-600">Managing supplier communications, handling RTS (Return to Sender) issues, and keeping the backend organized.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Experience</h2>
+            <div class="max-w-3xl mx-auto space-y-8">
+                <!-- Role 1 -->
+                <div class="bg-white p-6 rounded-xl border border-slate-200">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-lg text-slate-800">Shopify Operations Director</h3>
+                        <span class="text-xs font-bold bg-blue-100 text-blue-800 px-3 py-1 rounded-full">2025 - Present</span>
+                    </div>
+                    <p class="text-sm text-slate-500 mb-4 font-medium">Confidential E-commerce Brand (Dropshipping)</p>
+                    <ul class="list-disc list-inside text-sm space-y-2 text-slate-600">
+                        <li><strong>Team Building:</strong> Hired and trained a full support team. Created all training manuals (SOPs).</li>
+                        <li><strong>Revenue Protection:</strong> Managed the chargeback dashboard, winning disputes and reducing merchant fees.</li>
+                        <li><strong>Systems:</strong> Migrated team from Gmail to Freshdesk/RingCentral for better tracking.</li>
+                    </ul>
+                </div>
+                <!-- Role 2 -->
+                <div class="bg-white p-6 rounded-xl border border-slate-200">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-lg text-slate-800">Technical Support Engineer</h3>
+                        <span class="text-xs font-bold bg-slate-200 text-slate-600 px-3 py-1 rounded-full">2023 - 2025</span>
+                    </div>
+                    <p class="text-sm text-slate-500 mb-4 font-medium">BPO / Tech Sector</p>
+                    <ul class="list-disc list-inside text-sm space-y-2 text-slate-600">
+                        <li>Managed complex VoIP systems and A2P SMS compliance.</li>
+                        <li>Developed technical documentation and handled high-level escalations.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 hero-bg text-white">
+        <div class="container mx-auto px-6 max-w-2xl text-center">
+            <h2 class="text-3xl font-bold mb-4">Let's Secure Your Operations</h2>
+            <p class="text-slate-300 mb-8">
+                I am ready to start immediately. Whether you need a team leader, a dispute specialist, or an ops manager—I have the experience to deliver results on Day 1.
+            </p>
+            
+            <form id="contact-form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScuvvxGJ2KGjRJOgOjp7jVcGFYfpqt0y4CNIWUCaGT12eFUZg/formResponse" method="POST" target="hiddenConfirm" class="space-y-4 text-left bg-white/5 p-8 rounded-xl border border-white/10">
+                <div>
+                    <label class="text-xs font-bold text-slate-400 uppercase">Your Name</label>
+                    <input type="text" name="entry.1125382235" required class="w-full p-3 rounded bg-slate-800 border border-slate-700 text-white focus:border-blue-500 outline-none">
+                </div>
+                <div>
+                    <label class="text-xs font-bold text-slate-400 uppercase">Your Email</label>
+                    <input type="email" name="entry.1835642244" required class="w-full p-3 rounded bg-slate-800 border border-slate-700 text-white focus:border-blue-500 outline-none">
+                </div>
+                <div>
+                    <label class="text-xs font-bold text-slate-400 uppercase">Message</label>
+                    <textarea name="entry.734834947" rows="4" required class="w-full p-3 rounded bg-slate-800 border border-slate-700 text-white focus:border-blue-500 outline-none"></textarea>
+                </div>
+                <button type="submit" class="w-full btn btn-primary py-4 mt-2">Send Message</button>
+            </form>
+            <p id="form-status" class="mt-4 text-green-400 font-medium"></p>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 py-8 border-t border-slate-800 text-center text-slate-500 text-sm">
+        &copy; 2026 Adrian Cunanan. All Rights Reserved.
+    </footer>
+
+    <script>
+        feather.replace();
+        
+        // Mobile Menu
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+
+        // Form Logic
+        const form = document.getElementById('contact-form');
+        const status = document.getElementById('form-status');
+        const iframe = document.getElementById('hiddenConfirm');
+        let submitted = false;
+        form.addEventListener('submit', () => submitted = true);
+        iframe.addEventListener('load', () => {
+            if(submitted) {
+                status.innerText = "Message Sent! I'll reply shortly.";
+                form.reset();
+                setTimeout(() => status.innerText = "", 4000);
+            }
+        });
+    </script>
+</body>
+</html>
