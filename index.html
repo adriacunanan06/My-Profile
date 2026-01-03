@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO & Link Previews (The "Invisible" Upgrade) -->
+    <!-- SEO & Link Previews -->
     <title>Adrian Cunanan | Shopify Operations Director</title>
     <meta name="description" content="Shopify Operations Director specializing in Dispute Management, Team Leadership, and Dropshipping Logistics. Proven track record of recovering revenue.">
     
-    <!-- Social Share Tags (Makes your link look professional in emails/Slack) -->
+    <!-- Social Share Tags -->
     <meta property="og:title" content="Adrian Cunanan | Shopify Operations Director">
     <meta property="og:description" content="Operational leader available 7 days/week. See my portfolio of won disputes, SOPs, and daily workflows.">
     <meta property="og:image" content="https://lh3.googleusercontent.com/d/1uRHX70RouSdWuU2Wxf-OayJTuw1mBI00">
@@ -74,11 +74,15 @@
     <header class="bg-slate-900 sticky top-0 left-0 right-0 z-50 shadow-md">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#home" class="text-xl font-bold text-white tracking-tight">Adrian Cunanan</a>
-            <div class="hidden md:flex space-x-6 text-sm">
+            <div class="hidden md:flex space-x-6 text-sm items-center">
                 <a href="#about">About</a>
                 <a href="#portfolio">Proof of Work</a>
                 <a href="#skills">Competencies</a>
                 <a href="#experience">Experience</a>
+                <!-- Resume Download Button -->
+                <a href="resume.pdf" target="_blank" class="border border-slate-500 px-3 py-1 rounded hover:bg-slate-800 text-slate-300 transition-colors flex items-center gap-2">
+                    <i data-feather="download" class="w-4 h-4"></i> Resume
+                </a>
                 <a href="#contact" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500 !text-white transition">Hire Me</a>
             </div>
             <button id="mobile-menu-button" class="md:hidden text-white"><i data-feather="menu"></i></button>
@@ -89,6 +93,7 @@
             <a href="#portfolio" class="block py-3 px-6 text-white hover:bg-slate-800">Proof of Work</a>
             <a href="#skills" class="block py-3 px-6 text-white hover:bg-slate-800">Skills</a>
             <a href="#experience" class="block py-3 px-6 text-white hover:bg-slate-800">Experience</a>
+            <a href="resume.pdf" target="_blank" class="block py-3 px-6 text-white hover:bg-slate-800 font-medium">Download Resume</a>
             <a href="#contact" class="block py-3 px-6 text-blue-400 font-bold">Hire Me</a>
         </div>
     </header>
@@ -100,11 +105,8 @@
                 
                 <!-- Image Column (Left) -->
                 <div class="md:w-1/2 flex justify-center relative">
-                    <!-- Decorative Circle -->
                     <div class="absolute inset-0 bg-blue-500/20 rounded-full blur-3xl transform scale-90"></div>
-                    
                     <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-slate-700 shadow-2xl">
-                        <!-- Tip: Download your image and name it 'profile.jpg' for better speed -->
                         <img src="https://lh3.googleusercontent.com/d/1uRHX70RouSdWuU2Wxf-OayJTuw1mBI00" 
                              onerror="this.src='profile.jpg'"
                              alt="Adrian Cunanan" 
@@ -334,7 +336,7 @@
             menu.classList.toggle('hidden');
         });
 
-        // Close mobile menu when a link is clicked (New Fix)
+        // Close mobile menu when a link is clicked
         document.querySelectorAll('#mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 menu.classList.add('hidden');
