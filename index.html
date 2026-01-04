@@ -3,26 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO & Link Previews -->
     <title>Adrian Cunanan | Shopify Operations Director</title>
-    <meta name="description" content="Shopify Operations Director specializing in Dispute Management, Team Leadership, and Dropshipping Logistics. Proven track record of recovering revenue.">
     
-    <!-- Social Share Tags -->
+    <!-- Meta -->
+    <meta name="description" content="Shopify Operations Director specializing in Dispute Management, Team Leadership, and Dropshipping Logistics. Proven track record of recovering revenue.">
     <meta property="og:title" content="Adrian Cunanan | Shopify Operations Director">
     <meta property="og:description" content="Operational leader available 7 days/week. See my portfolio of won disputes, SOPs, and daily workflows.">
-    <!-- Uses Drive link for LinkedIn Preview (Absolute URL is better for Socials) -->
     <meta property="og:image" content="https://drive.usercontent.google.com/uc?id=15hjWDdt-cF1f5mjAiCCp0RJbHsGtQpSN&export=download">
     <meta property="og:type" content="website">
 
-    <!-- Favicon - Uses local file for speed & reliability -->
     <link rel="icon" href="profile.png" type="image/png">
     
+    <!-- Styles & Fonts -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
+    
     <style>
         html { scroll-padding-top: 100px; }
         body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
@@ -66,12 +64,12 @@
 
     <iframe name="hiddenConfirm" id="hiddenConfirm" style="display: none;"></iframe>
 
-    <!-- Top Bar -->
+    <!-- Ticker -->
     <div class="bg-blue-700 text-white text-xs md:text-sm py-2 text-center font-bold tracking-wide uppercase">
         🚀 Recent Wins: Reduced Team Response Time by 40% • Recovered Revenue via Dispute Defense • 100% SOP Compliance
     </div>
 
-    <!-- Navigation -->
+    <!-- Navbar -->
     <header class="bg-slate-900 sticky top-0 left-0 right-0 z-50 shadow-md">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#home" class="text-xl font-bold text-white tracking-tight">Adrian Cunanan</a>
@@ -80,7 +78,6 @@
                 <a href="#portfolio">Proof of Work</a>
                 <a href="#skills">Competencies</a>
                 <a href="#experience">Experience</a>
-                <!-- Resume Download Button - Linked to Google Drive -->
                 <a href="https://drive.usercontent.google.com/uc?id=15hjWDdt-cF1f5mjAiCCp0RJbHsGtQpSN&export=download" target="_blank" class="border border-slate-500 px-3 py-1 rounded hover:bg-slate-800 text-slate-300 transition-colors flex items-center gap-2">
                     <i data-feather="download" class="w-4 h-4"></i> Resume
                 </a>
@@ -89,6 +86,7 @@
             <button id="mobile-menu-button" class="md:hidden text-white"><i data-feather="menu"></i></button>
         </nav>
         
+        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-slate-900 pb-4">
             <a href="#about" class="block py-3 px-6 text-white hover:bg-slate-800">About</a>
             <a href="#portfolio" class="block py-3 px-6 text-white hover:bg-slate-800">Proof of Work</a>
@@ -104,18 +102,13 @@
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center gap-12">
                 
-                <!-- Image Column (Left) -->
                 <div class="md:w-1/2 flex justify-center relative">
                     <div class="absolute inset-0 bg-blue-500/20 rounded-full blur-3xl transform scale-90"></div>
                     <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-slate-700 shadow-2xl">
-                        <!-- Use local profile.png for fast loading -->
-                        <img src="profile.png" 
-                             alt="Adrian Cunanan" 
-                             class="w-full h-full object-cover">
+                        <img src="profile.png" alt="Adrian Cunanan" class="w-full h-full object-cover">
                     </div>
                 </div>
 
-                <!-- Text Column (Right) -->
                 <div class="md:w-1/2 text-center md:text-left">
                     <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 text-xs font-bold tracking-wider text-green-300 uppercase bg-green-900/30 rounded-full border border-green-500/30">
                         <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
@@ -140,7 +133,7 @@
         </div>
     </section>
 
-    <!-- Work Samples -->
+    <!-- Portfolio -->
     <section id="portfolio" class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <h2 class="section-title">Visual Proof of Work</h2>
@@ -173,7 +166,7 @@
                     <p class="text-sm text-slate-500">Training manuals I write to standardize agent responses.</p>
                 </div>
 
-                <!-- Won Proof -->
+                <!-- Won -->
                 <div class="group cursor-pointer transform hover:scale-105 transition-transform duration-300" onclick="openModal('won.png', 'Evidence Success')">
                     <div class="overflow-hidden rounded-lg shadow border border-slate-200 bg-slate-100 h-48 flex items-center justify-center relative">
                         <img src="won.png" alt="Dispute Won" class="object-cover w-full h-full">
@@ -192,7 +185,6 @@
     <section id="about" class="py-20 bg-slate-50">
         <div class="container mx-auto px-6">
             <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-                <!-- Stack Card (Left) -->
                 <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200">
                     <h3 class="font-bold text-slate-800 mb-4 flex items-center gap-2">
                         <i data-feather="check-square" class="text-blue-600"></i>
@@ -206,7 +198,6 @@
                         <li class="flex items-start gap-3"><i data-feather="check" class="w-4 h-4 text-green-500 mt-0.5"></i> <strong>Schedule:</strong> Full 7-day coverage availability.</li>
                     </ul>
                 </div>
-                <!-- Text (Right) -->
                 <div>
                     <h2 class="text-3xl font-bold text-slate-800 mb-4">I Don't Just Manage.<br>I Take Ownership.</h2>
                     <p class="text-slate-600 mb-4">
@@ -226,7 +217,7 @@
         </div>
     </section>
 
-    <!-- Competencies -->
+    <!-- Skills -->
     <section id="skills" class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <h2 class="section-title">Core Competencies</h2>
@@ -282,7 +273,7 @@
         </div>
     </section>
 
-    <!-- Contact Form -->
+    <!-- Contact -->
     <section id="contact" class="py-20 hero-bg text-white">
         <div class="container mx-auto px-6 max-w-2xl text-center">
             <h2 class="text-3xl font-bold mb-4">Let's Secure Your Operations</h2>
@@ -308,7 +299,6 @@
             
             <p id="form-status" class="mt-4 text-green-400 font-medium"></p>
             
-            <!-- Direct Contact Link -->
             <div class="mt-8 text-sm text-slate-400">
                 <p>Prefer to email directly? <a href="mailto:adriancunananjune@gmail.com" class="text-white underline hover:text-blue-300">adriancunananjune@gmail.com</a></p>
             </div>
@@ -318,14 +308,13 @@
     <footer class="bg-slate-900 py-8 border-t border-slate-800 text-center text-slate-500 text-sm flex flex-col gap-4">
         <div>&copy; 2026 Adrian Cunanan. All Rights Reserved.</div>
         <div class="flex justify-center gap-4">
-            <!-- LinkedIn Link -->
             <a href="https://www.linkedin.com/in/adrian-anthony-cunanan/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">
                 <i data-feather="linkedin" class="w-5 h-5"></i>
             </a>
         </div>
     </footer>
 
-    <!-- Full Screen Modal -->
+    <!-- Lightbox -->
     <div id="imageModal" class="fixed inset-0 z-50 hidden bg-black/95 flex items-center justify-center p-4 backdrop-blur-sm transition-opacity duration-300 opacity-0" onclick="closeModal()">
         <div class="relative max-w-7xl max-h-[95vh] w-full flex flex-col items-center">
             <button class="absolute -top-12 right-0 text-white hover:text-gray-300 focus:outline-none p-2" onclick="closeModal()">
@@ -341,7 +330,6 @@
     <script>
         feather.replace();
         
-        // Mobile Menu Logic
         const btn = document.getElementById('mobile-menu-button');
         const menu = document.getElementById('mobile-menu');
         
@@ -349,14 +337,12 @@
             menu.classList.toggle('hidden');
         });
 
-        // Close mobile menu when a link is clicked
         document.querySelectorAll('#mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 menu.classList.add('hidden');
             });
         });
 
-        // Form Logic
         const form = document.getElementById('contact-form');
         const status = document.getElementById('form-status');
         const iframe = document.getElementById('hiddenConfirm');
@@ -370,7 +356,6 @@
             }
         });
 
-        // Modal Logic
         function openModal(imageSrc, caption) {
             const modal = document.getElementById('imageModal');
             const modalImg = document.getElementById('modalImage');
